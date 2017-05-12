@@ -17,10 +17,10 @@ string &operator<<(string &out, regex_token_iterator<string::const_iterator> &b)
 }
 
 int main() {
-	string jeden("na straganie w dzien targowy, takie tocza sie rozmowy na rozne tematy od banana");
+	string jeden("na straganie w dzien targowy, takie tocza sie rozmowy na rozne tematy od banana\ndruga linia\n");
 	regex stragan_reg(".*stragan.*");
-	regex na_reg("na");
-	regex a_reg("a");
+	regex na_reg("$");
+	regex a_reg("$");
 
 	smatch m;
 	match_results<string::iterator> mi;
@@ -84,11 +84,11 @@ int main() {
 		cout << *token_it << endl;
 	}
 
-	string **tablica = new string*[3];
+	string **tablica = new string*[3];		//dwuwymiarowa na przysz³oœæ
 	int i = 0;
 	for (; tmp != tok_end; tmp++) {
-		tablica[i] = new string;
-		*tablica[i] << tmp;
+		tablica[i] = new string[1];
+		*tablica[i] = *tmp;
 		i++;
 	}
 
