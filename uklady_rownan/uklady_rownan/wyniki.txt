@@ -1,0 +1,2 @@
+Podano nieprawid³owe dane wejœciowe!
+Nastapilo dzielenie przez zero.
