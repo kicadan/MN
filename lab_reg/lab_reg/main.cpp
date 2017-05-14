@@ -80,6 +80,7 @@ public:
 			catch (char) {
 				cout << "Udalo sie zalogowac" << endl;
 				login = tmp_log;
+				logged = true;
 				break;
 			}
 			catch (int) {
